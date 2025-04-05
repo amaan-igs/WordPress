@@ -44890,7 +44890,8 @@ function PostFeaturedImageEdit({
           label: label,
           showTooltip: true,
           tooltipPosition: "top center",
-          onClick: () => {
+          onClick: e => {
+            e.preventDefault();
             open();
           }
         });
@@ -52137,6 +52138,9 @@ const query_total_metadata = {
         width: true,
         style: true
       }
+    },
+    interactivity: {
+      clientNavigation: true
     }
   },
   style: "wp-block-query-total"
